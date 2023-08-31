@@ -1,0 +1,204 @@
+select.select {
+    display: none;
+}
+
+.select2 {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    &-container {
+        z-index: 10000;
+        &--open {
+            svg {
+                transform: scaleY(-1);
+            }
+        }
+    }
+    &-selection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 15px;
+        font: 400 16px / 1.3 $font;
+        background: #fff;
+        border: 1px solid rgba($grey, .5);
+        border-radius: 10px;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        fill: $grey;
+        transition: .2s $trans;
+        &:hover {
+            fill: #000;
+        }
+        &__arrow {
+            display: block;
+            flex-shrink: 0;
+            margin: 0 0 0 10px;
+            svg {
+                width: 14px;
+                height: 8px;
+                transition: .2s transform $trans;
+            }
+        }
+        &__placeholder {
+            // color: $grey;
+        }
+    }
+    &-dropdown {
+        display: block;
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0,0,0,.1), 0px 4px 8px rgba(0,0,0,.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &-search {
+        &__field {
+            @extend .input;
+            height: 44px;
+            &::placeholder {
+                color: $grey;
+            }
+        }
+    }
+    &-results {
+        max-height: 210px;
+        overflow-y: auto;
+        display: block;
+        &__option {
+            padding: 10px 15px;
+            cursor: pointer;
+            &:hover {
+                background: rgba($red, .05);
+            }
+            &--selected {
+                background: rgba($red, .1);
+            }
+        }
+    }
+}
+
+.select-standart {
+    position: relative;
+    display: block;
+    &__select {
+        height: 60px;
+        width: 100%;
+        display: block;
+        border: 1px solid $grey;
+        border-radius: 4px;
+        font: 400 16px / 1 $font;
+        padding: 0 40px 0 15px;
+        background: #fff;
+        appearance: none;
+        cursor: pointer;
+        transition: .2s border-color $trans;
+        &:hover {
+            border-color: #000;
+            + svg {
+                fill: #000;
+            }
+        }
+    }
+    svg {
+        position: absolute;
+        right: 15px;
+        width: 15px;
+        height: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        fill: $grey;
+        pointer-events: none;
+        transition: .2s fill $trans;
+    }
+}
+
+.select-page {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .select-page {
+        display: block;
+        position: relative;
+        font: 400 16px / 1 $font;
+        margin: 0 0 15px;
+        &__btn {
+            width: 100%;
+            height: 60px;
+            padding: 0 20px;
+            border: 1px solid $grey2;
+            border-radius: 10px;
+            color: $red;
+            fill: $red;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+            &.active-target {
+                svg {
+                    transform: scaleY(-1);
+                }
+            }
+            &-icon {
+                width: 22px;
+                display: flex;
+                justify-content: center;
+                margin: 0 6px 0 0;
+                flex-shrink: 0;
+            }
+            &-arrow {
+                margin-left: auto;
+                svg {
+                    width: 14px;
+                    height: 8px;
+                    transition: .2s transform $trans;
+                }
+            }
+        }
+        &__list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            box-shadow: 0px 0px 3.73743px rgba(0,0,0,.04), 0px 3.73743px 7.47485px rgba(0,0,0,.06);
+            z-index: 2;
+            border-radius: 0 0 10px 10px;
+            padding: 10px 0;
+            pointer-events: none;
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(.9);
+            transition: .3s $trans;
+            &.active-target {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                pointer-events: all;
+            }
+            &-a {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+            }
+            &-icon {
+                width: 22px;
+                display: flex;
+                justify-content: center;
+                margin: 0 6px 0 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .select2 {
+        &-selection {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.social {
+    &__list {
+        display: flex;
+        margin: 0 -5px;
+    }
+    &__li {
+        padding: 0 5px;
+        flex-shrink: 0;
+    }
+    &__a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        fill: #fff;
+        &:hover {
+            opacity: .8;
+        }
+        &--viber {
+            background: #7C509A;
+            svg {
+                width: 21px;
+                height: 23px;
+            }
+        }
+        &--telegram {
+            background: #27A6E5;
+            svg {
+                width: 19px;
+                height: 17px;
+            }
+        }
+        &--whatsapp {
+            background: #48C95F;
+            svg {
+                width: 21px;
+                height: 21px;
+            }
+        }
+        &--facebook {
+            background: #0B84EE;
+            svg {
+                width: 12px;
+                height: 23px;
+            }
+        }
+    }
+}

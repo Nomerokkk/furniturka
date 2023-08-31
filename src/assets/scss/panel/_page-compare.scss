@@ -1,0 +1,121 @@
+.page-compare {
+    &__nav {
+        font: 600 17px / 1 $font;
+        color: $grey2;
+        display: flex;
+        align-items: center;
+        margin: 0 -15px;
+        justify-content: space-between;
+        &-right {
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 0;
+            justify-content: flex-end;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 10px;
+            fill: $grey2;
+            &:hover {
+                background: rgba(#000, .05);
+                color: #000;
+                fill: #000;
+            }
+            &--differents {
+                color: #000;
+                flex-shrink: 0;
+            }
+            &--compare {
+                svg {
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &--share {
+                svg {
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            svg {
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    &__products {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 0;
+    }
+    &__bl {
+        margin: 0 0 30px;
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        font: 600 18px / 1.2 $font;
+        padding: 0 20px 12px;
+        border-bottom: 1px solid rgba(#000, .1);
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        font: 400 15px / 1.2 $font;
+        color: $grey2;
+        &-item {
+            padding: 13px 20px;
+            width: 296px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page-compare {
+        &__nav {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-compare {
+        &__nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            &-right {
+                justify-content: center;
+            }
+            &-item {
+                font-size: 14px;
+                &--differents {
+                    order: 2;
+                    font-size: 17px;
+                }
+            }
+        }
+        &__products {
+            margin: 10px 0 30px;
+        }
+        &__bl {
+            margin: 0 0 15px;
+        }
+        &__title {
+            padding: 0 12px 12px;
+        }
+        &__list {
+            &-item {
+                width: 50%;
+                padding: 13px 12px;
+            }
+        }
+    }
+}

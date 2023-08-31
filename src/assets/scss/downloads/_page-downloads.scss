@@ -1,0 +1,19 @@
+.page-downloads {
+    .row {
+        margin: -15px;
+    }
+    .col {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-downloads {
+        .row {
+            margin: -5px;
+        }
+        .col {
+            padding: 5px;
+        }
+    }
+}

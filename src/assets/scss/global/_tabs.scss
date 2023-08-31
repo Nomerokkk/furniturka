@@ -1,0 +1,113 @@
+.tabs {
+    // text-transform: uppercase;
+    color: $grey2;
+    margin: 0 0 20px;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    &:hover {
+        .tabs {
+            &__a {
+                &.active {
+                    &::before {
+                        width: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: rgba(#000, .1);
+    }
+    &__scroll {
+        overflow-x: auto;
+        margin-right: -30px;
+        @include scrollbars(0px, #000, $red);
+    }
+    &__list {
+        display: flex;
+    }
+    &__li {
+        padding: 0 30px 0 0;
+    }
+    &__a {
+        padding: 0 0 12px;
+        display: block;
+        position: relative;
+        text-align: center;
+        &.active,
+        &:hover {
+            color: #000;
+            font-weight: 700;
+            &::before {
+                width: 100%;
+            }
+        }
+        &::before {
+            content: '';
+            height: 2px;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            transition: .3s $trans;
+            z-index: 2;
+        }
+    }
+    &--big {
+        .tabs {
+            &__li {
+                padding: 0;
+            }
+            &__a {
+                min-width: 140px;
+                text-transform: uppercase;
+                padding: 0 15px 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tabs {
+        &--big {
+            .tabs {
+                &__a {
+                    min-width: 110px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .tabs {
+        &__scroll {
+            margin-right: -15px;
+        }
+        &__list {
+            margin: 0 -10px;
+        }
+        &__li {
+            padding: 0 10px;
+        }
+        &--big {
+            .tabs {
+                &__list {
+                    margin: 0;
+                }
+                &__a {
+                    min-width: 40px;
+                }
+            }
+        }
+    }
+}

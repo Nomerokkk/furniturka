@@ -1,0 +1,150 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0;
+    &__list {
+        display: flex;
+        flex-shrink: 0;
+        padding: 0 5px;
+    }
+    &__li {
+        flex-shrink: 0;
+        padding: 0 5px;
+    }
+    &__item {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        fill: $red;
+        font: 600 18px / 1 $font;
+        &--arrow {
+            width: 84px;
+            background: #ededed;
+            &:hover {
+                background: $red;
+                fill: #fff;
+            }
+            svg {
+                width: 20px;
+                height: 10px;
+            }
+        }
+        &--number {
+            width: 56px;
+            border: 1px solid $grey;
+            &:hover {
+                border-color: $red;
+            }
+            &.active {
+                background: $red;
+                border-color: $red;
+                color: #fff;
+            }
+        }
+        &--prev {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+        &--next {
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+
+.show-more {
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+        font: 600 18px / 1 $font;
+        color: $red;
+        fill: $red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        padding: 0 30px;
+        border-radius: 10px;
+        &:hover {
+            span {
+                &::after {
+                    width: 100%;
+                }
+            }
+            svg {
+                transform: rotate(360deg);
+            }
+        }
+        span {
+            display: block;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: $red;
+                transition: .3s $trans;
+            }
+        }
+        svg {
+            width: 32px;
+            height: 32px;
+            margin: 0 9px 0 0;
+            transition: .3s $trans;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .pagination {
+        &__item {
+            &--arrow {
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pagination {
+        &__li {
+            padding: 0 1.5px;
+        }
+        &__item {
+            height: 34px;
+            border-radius: 6px;
+            font-size: 11px;
+            &--arrow {
+                width: 34px;
+                svg {
+                    width: 13px;
+                    height: 6px;
+                }
+            }
+            &--number {
+                width: 34px;
+            }
+        }
+    }
+
+    .show-more {
+        &__btn {
+            font-size: 12px;
+            height: 40px;
+            svg {
+                width: 17px;
+                height: 17px;
+            }
+        }
+    }
+}

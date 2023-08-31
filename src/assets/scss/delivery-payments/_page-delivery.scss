@@ -1,0 +1,118 @@
+.page-delivery {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__col {
+        width: 50%;
+        padding: 0 15px;
+    }
+    &__item {
+        display: flex;
+        margin: 0 0 15px;
+        &-text {
+            flex-grow: 1;
+        }
+        &-img {
+            width: 56px;
+            height: 40px;
+            flex-shrink: 0;
+            margin: 0 0 0 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            img {
+                max-height: 100%;
+                width: auto;
+            }
+        }
+    }
+    &__bl {
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        margin: 0 0 10px;
+        &:last-child {
+            margin: 0;
+        }
+        &-img {
+            width: 132px;
+            height: 142px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+            margin: 0 16px 0 0;
+            display: block;
+            color: #fff;
+            &:hover {
+                color: $red;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 42.96%);
+                z-index: 1;
+            }
+        }
+        &-picture {
+            display: block;
+            height: 100%;
+            width: 100%;
+            img {
+                @extend .fit-cover;
+            }
+        }
+        &-title {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            font: 600 22px / 1 $font;
+            z-index: 1;
+            padding: 12px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .page-delivery {
+        &__col {
+            width: 100%;
+            margin: 0 0 20px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-delivery {
+        &__bl {
+            justify-content: space-between;
+            &-img {
+                order: 2;
+                width: 68px;
+                height: 64px;
+                margin: 0 0 0 5px;
+            }
+            &-title {
+                font-size: 11px;
+                padding: 6px 0;
+            }
+        }
+    }
+}

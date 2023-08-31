@@ -1,0 +1,59 @@
+.info {
+    font-size: 14px;
+    padding: 0 !important;
+    &__li {
+        margin: 3px 0;
+        list-style-type: none !important;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: baseline;
+        &--address {
+            svg {
+                height: 16px;
+                top: 3px;
+            }
+        }
+        &--phone {
+            svg {
+                height: 12px;
+            }
+        }
+        &--email {
+            .info__title {
+                text-decoration: underline;
+            }
+            svg {
+                height: 9px;
+            }
+        }
+        &--time {
+            svg {
+                height: 12px;
+                top: 1px;
+            }
+        }
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__icon {
+        width: 12px;
+        margin: 0 5px 0 0;
+        flex-shrink: 0;
+        fill: $red;
+        svg {
+            position: relative;
+        }
+    }
+}

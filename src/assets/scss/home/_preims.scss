@@ -1,0 +1,37 @@
+.preims {
+    &__wrapper {
+        display: flex;
+        margin: -10px;
+    }
+    &__col {
+        padding: 10px;
+    }
+    &__item {
+        display: flex;
+        color: $grey2;
+        font-weight: 600;
+    }
+    &__icon {
+        flex-shrink: 0;
+        width: 40px;
+        margin: 0 20px 0 0;
+    }
+    &__title {
+        
+    }
+    &__desc {
+        font-size: 12px;
+        margin: 5px 0 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .preims {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__col {
+            width: 50%;
+        }
+    }
+}

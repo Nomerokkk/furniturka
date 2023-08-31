@@ -1,0 +1,208 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    background: $red;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 0 30px;
+    fill: #fff;
+    transition: .2s $trans;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    &:hover {
+        background: #c10000;
+    }
+    &--transparent {
+        background: transparent;
+        color: $grey;
+        &:hover {
+            background: rgba($red, .2);
+            color: $red;
+        }
+    }
+    &--cart {
+        stroke: #fff;
+        stroke-width: .2px;
+        svg {
+            width: 30px;
+            height: 30px;
+            margin: 0 9px 0 0;
+        }
+    }
+    &--border-red {
+        background: transparent;
+        border: 1px solid $red;
+        color: $red;
+        &:hover {
+            background: rgba($red, .2);
+            border-color: #fff;
+            color: $red;
+        }
+    }
+    &--border-grey {
+        border: 1px solid $grey2;
+        color: $grey2;
+        fill: $grey2;
+        background: none;
+        &:hover {
+            background: rgba(#000, .1);
+            border-color: #000;
+            color: #000;
+        }
+    }
+    &--grey {
+        background: $grey2;
+        &:hover {
+            background: #000;
+        }
+    }
+    &[disabled] {
+        cursor: inherit;
+        background: #DEDDDD !important;
+        color: $grey2 !important;
+    }
+}
+
+.btn-catalog {
+    display: none;
+}
+
+.btn-nav {
+    position: relative;
+    flex-shrink: 0;
+    &__btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        &:hover {
+            background: rgba(#000, .05);
+            span {
+                background: #000;
+            }
+        }
+        &-inner {
+            width: 4px;
+            height: 18px;
+            position: relative;
+            span {
+                display: block;
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                left: 0;
+                border-radius: 50%;
+                background: $grey2;
+                &:nth-child(1) {
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    margin: -2px 0 0;
+                }
+                &:nth-child(3) {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    &__list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+        overflow: hidden;
+        transform: scale(.9);
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s $trans;
+        z-index: 8;
+        min-width: 250px;
+        display: none;
+        &.active-target {
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+        }
+        &-item {
+            padding: 0 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            fill: $grey2;
+            &:hover {
+                color: #000;
+                fill: #000;
+                background: rgba(#000, .05);
+            }
+        }
+        &-icon {
+            flex-shrink: 0;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px 0 0;
+            &--remove {
+                svg {
+                    width: 20px;
+                    height: 23px;
+                }
+            }
+            &--like {
+                fill: none;
+                stroke: $grey2;
+                stroke-width: 2px;
+                .btn-nav__list-item:hover & {
+                    stroke: #000;
+                }
+                svg {
+                    width: 24px;
+                    height: 20px;
+                }
+            }
+        }
+        &-title {
+            font: 500 18px / 1 $font;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .btn-catalog {
+        display: flex;
+        width: 100%;
+        font-size: 16px;
+        height: 60px !important;
+        margin: 15px 0 0;
+        svg {
+            width: 18px;
+            height: 18px;
+            margin: 0 8px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn {
+        height: 44px;
+        &--cart {
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

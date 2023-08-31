@@ -1,0 +1,144 @@
+.filter {
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    padding: 20px 20px 5px;
+    font-size: 15px;
+    margin: 30px 0 0;
+    width: 280px;
+    display: block !important;
+    color: $text;
+    &:first-child {
+        margin: 0;
+    }
+    &__price {
+        margin: 12px 0 0;
+        &-inputs {
+            display: flex;
+            align-items: center;
+            margin: 10px 0 17px;
+        }
+        &-line {
+            color: $grey;
+            flex-shrink: 0;
+            margin: 0 6px;
+        }
+    }
+    &__title {
+        font: 600 22px / 1.2 $font;
+    }
+    &__item {
+        padding: 17px 0 13px;
+        margin: 0 -20px;
+        position: relative;
+        &:first-child {
+            margin-top: 25px;
+            &::before {
+                content: '';
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: linear-gradient(to right, rgba(#fff, 0), #B8B8B8, rgba(#fff, 0));
+            }
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(#fff, 0), #B8B8B8, rgba(#fff, 0));
+        }
+        &-title {
+            margin: 0 0 7px;
+            padding: 0 20px;
+        }
+        &-list {
+            &-li {
+                padding: 0 13px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__btns {
+        width: 196px;
+        margin: 20px auto 0;
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.range-slider {
+    background: $grey;
+    touch-action: none;
+    user-select: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    input {
+        display: none;
+    }
+    .range-slider {
+        &__thumb {
+            width: 18px;
+            height: 18px;
+            background: $red;
+            border: 1px solid #fff;
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+        &__range {
+            position: absolute;
+            z-index: 1;
+            transform: translate(0,-50%);
+            top: 50%;
+            background: $red;
+        }
+    }
+}
+
+.filter-btn {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .filter {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .filter-btn {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font: 600 16px / 1 $font;
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        padding: 0 15px;
+        fill: $red;
+        margin: 15px 0 0;
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}

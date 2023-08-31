@@ -1,0 +1,28 @@
+.brands {
+    &__slider {
+
+    }
+    .scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .brands {
+        &__slider {
+            .col {
+                flex-shrink: 0;
+                padding: 0;
+                width: 100px;
+            }
+            .row {
+                flex-wrap: nowrap;
+                margin: 0;
+            }
+        }
+        .scrollbar {
+            display: block;
+            margin: 15px 0 0;
+        }
+    }
+}

@@ -1,0 +1,390 @@
+@import '../libs/fancybox/jquery.fancybox.min.css';
+
+:root {
+    --fancybox-accent-color: red;
+}
+.fancybox {
+    &__backdrop {
+        background: rgba(#000, .7);
+    }
+    &__slide {
+        padding: 60px 0;
+    }
+}
+
+.fancybox__content>.carousel__button.is-close {
+    right: 10px;
+    top: 10px;
+    color: $grey2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: .2s $trans;
+    &:hover {
+        background: rgba(#000, .05);
+        color: #000;
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+    svg {
+        filter: none;
+        transition: .2s transform $trans;
+    }
+}
+
+.modal {
+    border-radius: 10px;
+    max-width: 706px;
+    width: 100%;
+    color: $text;
+    display: none;
+    padding: 0;
+    &__top {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px 0 30px;
+        border-bottom: 1px solid rgba(#000, .2);
+    }
+    &__title {
+        font: 600 25px / 1 $font;
+    }
+    &__content {
+        padding: 30px;
+    }
+    &__label {
+        margin: 0 0 20px;
+    }
+    &__btns {
+        margin: 15px -5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        &-col {
+            padding: 5px;
+        }
+    }
+}
+
+.modal-basket {
+    max-width: 926px;
+    .modal__content {
+        padding-top: 0;
+    }
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 30px 0 0;
+    }
+    &__price {
+        text-align: right;
+        margin: 20px 0;
+        &-title {
+            font: 400 18px / 1 $font;
+            margin: 0 20px 0 0;
+            color: $grey2;
+        }
+        &-value {
+            font: 600 35px / 1 $font;
+        }
+    }
+    &__desc {
+        margin: 30px 0 0;
+        background: #f2f2f2;
+        border-radius: 10px;
+        padding: 20px 30px;
+        font: 500 14px / 1.6 $font;
+    }
+}
+
+.modal-user {
+    max-width: 706px;
+    &__wrapper {
+        display: flex;
+    }
+    &__form {
+        flex-grow: 1;
+    }
+    &__password {
+        display: flex;
+        &-input {
+            flex-grow: 1;
+        }
+        &-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            fill: $grey;
+            border-radius: 10px;
+            margin: 20px 0 0;
+            &:hover {
+                background: rgba($red, .1);
+                fill: $red;
+                &::after {
+                    background: $red;
+                }
+            }
+            &.active {
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 2px;
+                background: $grey;
+                transform: rotate(-45deg);
+                transition: .2s $trans;
+            }
+            svg {
+                width: 27px;
+                height: 17px;
+            }
+        }
+    }
+    &__remember {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin: -10px 0;
+        color: $grey2;
+        &-lost {
+            a {
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+    &__btns {
+        margin: 20px 0 0;
+        .btn {
+            width: 100%;
+        }
+        &-link {
+            font: 600 14px / 1 $font;
+            text-align: center;
+            margin: 20px 0 0;
+            color: $grey2;
+            a {
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+    &__or {
+        flex-shrink: 0;
+        margin: 0 20px;
+        color: $grey;
+        font: 400 18px / 1 $font;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            background: #f2f2f2;
+        }
+        span {
+            background: #fff;
+            position: relative;
+            display: block;
+            padding: 10px 0;
+        }
+    }
+    &__social {
+        width: 226px;
+        flex-shrink: 0;
+        &-title {
+            text-align: center;
+            margin: 0 0 20px;
+            color: $grey2;
+            font: 400 14px / 1 $font;
+        }
+        &-li {
+            margin: 0 0 15px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        &-item {
+            height: 54px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F5F5F5;
+            width: 100%;
+            border-radius: 10px;
+            font: 600 18px / 1 $font;
+            color: $grey2;
+            &:hover {
+                color: #000;
+            }
+        }
+        &-icon {
+            margin: 0 14px 0 0;
+            flex-shrink: 0;
+        }
+    }
+    &__accept {
+        color: $grey;
+        font: 400 13px / 1.44 $font;
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+
+.modal-add-reviews {
+    &__stars {
+        margin: 0 0 20px;
+    }
+}
+
+.modal-remove {
+    &__desc {
+        font: 600 20px / 1.3 $font;
+    }
+}
+
+.modal-city {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px -10px 15px;
+        &-li {
+            width: 33.333%;
+            padding: 10px;
+        }
+        &-item {
+            font: 600 18px / 1 $font;
+            padding: 8px;
+            display: inline-flex;
+            transition: .2s $trans;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                color: $red;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .fancybox {
+        &__slide {
+            padding: 0;
+        }
+    }
+
+    .fancybox__content>.carousel__button.is-close {
+        top: 5px;
+        right: 5px;
+    }
+
+    .modal {
+        border-radius: 0;
+        &__top {
+            padding: 0 50px 0 15px;
+            height: 60px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__content {
+            padding: 15px 15px 25px;
+        }
+        &__btns {
+            justify-content: center;
+        }
+    }
+
+    .modal-basket {
+        &__price {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            &-value {
+                font-size: 22px;
+            }
+        }
+        &__btns {
+            margin: 20px 0 0;
+            justify-content: center;
+            .btn {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+        &__desc {
+            padding: 15px;
+            margin: 20px 0 0;
+        }
+    }
+
+    .modal-user {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__form {
+            width: 100%;
+        }
+        &__remember {
+            font-size: 12px;
+        }
+        &__or {
+            width: 100%;
+            margin: 30px 0;
+            &::before {
+                height: 1px;
+                width: 100%;
+                top: 50%;
+                left: 0;
+            }
+            span {
+                padding: 0 10px;
+            }
+        }
+        &__social {
+            width: 100%;
+        }
+    }
+
+    .modal-remove {
+        &__desc {
+            font-size: 16px;
+        }
+    }
+
+    .modal-city {
+        &__list {
+            &-li {
+                width: 50%;
+            }
+        }
+    }
+}

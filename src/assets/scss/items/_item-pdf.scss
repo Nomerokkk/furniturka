@@ -1,0 +1,22 @@
+.item-pdf {
+    background: #F2F2F2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    &:hover {
+        background: rgba(#000, .1);
+        color: #000;
+    }
+    &__icon {
+        width: 38px;
+        flex-shrink: 0;
+        margin: 0 18px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .item-pdf {
+        font-size: 14px;
+    }
+}

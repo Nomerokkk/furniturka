@@ -1,0 +1,46 @@
+.item-compare {
+    width: 296px;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: block;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 3.73743px rgba(0, 0, 0, 0.04), 0px 3.73743px 7.47485px rgba(0, 0, 0, 0.06);
+    &__img {
+        height: 70px;
+        width: 80px;
+        display: block;
+        img {
+            @extend .fit-contain;
+        }
+    }
+    &__picture {
+        display: block;
+    }
+    &__title {
+        font-weight: 400;
+        line-height: 1.46;
+        display: block;
+        margin: 10px 0 5px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .btn-nav {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .item-compare {
+        padding: 10px 12px;
+        width: 50%;
+        .btn-nav {
+            top: 5px;
+        }
+    }
+}

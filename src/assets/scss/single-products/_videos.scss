@@ -1,0 +1,52 @@
+.videos {
+    &__item {
+        height: 180px;
+        border-radius: 10px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+            svg {
+                transform: translate(-50%, -50%) scale(1.2) ;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba($red, .4);
+            z-index: 2;
+            opacity: 0;
+            transition: .3s $trans;
+        }
+        img {
+            @extend .fit-cover;
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            z-index: 4;
+            fill: #fff;
+            transition: .3s $trans;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .videos {
+        &__item {
+            height: 140px;
+        }
+    }
+}

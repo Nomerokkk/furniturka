@@ -1,0 +1,16 @@
+.page-brands {
+    &__wrapper {
+        margin: 20px 0 0;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .page-brands {
+        .col {
+            width: 25%;
+        }
+        .item-brands {
+            height: 120px;
+        }
+    }
+}

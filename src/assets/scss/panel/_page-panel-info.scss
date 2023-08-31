@@ -1,0 +1,54 @@
+.page-panel-info {
+    &__bl {
+        margin: 0 0 20px;
+    }
+    .row {
+        margin: -10px;
+    }
+    .col {
+        width: 50%;
+        padding: 10px;
+    }
+    &__item {
+
+    }
+    .input {
+        height: 60px;
+    }
+    &__checkbox {
+        margin: 15px 0 0;
+        display: flex;
+        font-size: 12px;
+    }
+    &__address {
+        margin: 15px 0 20px;
+    }
+    &__subtitle {
+        font: 600 18px / 1.2 $font;
+        margin: 0 0 10px;
+    }
+    &__add {
+        .btn {
+            min-width: 280px;
+        }
+        span {
+            font: 600 40px / 1 $font;
+            display: block;
+            margin: -6px 5px 0 0;
+        }
+    }
+    &__btn {
+        margin: 20px 0 0;
+        .btn {
+            min-width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-panel-info {
+        .col {
+            width: 100%;
+        }
+    }
+}

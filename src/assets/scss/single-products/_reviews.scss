@@ -1,0 +1,19 @@
+.reviews {
+    &__top {
+        margin: 0 0 20px;
+    }
+    &__title {
+        margin: 0 0 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .reviews {
+        &__top {
+            margin: 0 0 15px;
+        }
+        &__title {
+            margin: 0 0 10px;
+        }
+    }
+}

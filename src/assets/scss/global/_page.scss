@@ -1,0 +1,137 @@
+.page {
+    padding: 10px 0 60px;
+    flex-grow: 1;
+    &.bg-grey {
+        position: relative;
+        &::before {
+            content: '';
+            height: 100px;
+            width: 100%;
+            bottom: 100%;
+            left: 0;
+            position: absolute;
+            background: #f8f8f8;
+            z-index: -1;
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__sidebar {
+        flex-shrink: 0;
+        margin: 0 30px 0 0;
+        &-inner {
+            position: sticky;
+            top: 90px;
+            left: 0;
+            z-index: 60;
+            &--none-sticky {
+                position: static;
+            }
+        }
+    }
+    &__content {
+        padding: 10px 0 0;
+        min-width: 0;
+        flex-grow: 1;
+    }
+    &__picture {
+        display: block;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+            @extend .fit-cover;
+        }
+    }
+    &__top {
+        margin: 0 0 15px;
+    }
+    &__title {
+        margin: 6px 0 0;
+    }
+}
+
+.breadcrumbs {
+    color: $grey;
+    font: 400 14px / 1.5 $font;
+    &__back {
+        display: none;
+    }
+    &__list {
+        svg {
+            width: 21px;
+            height: 17px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+        }
+    }
+    &__li {
+        display: inline;
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+        &::after {
+            content: '>';
+            margin: 0 5px;
+        }
+    }
+    &__a {
+        fill: $grey;
+        &:hover {
+            color: $red;
+            fill: $red;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page {
+        &__picture {
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .page {
+        &__sidebar {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page {
+        padding: 10px 0 30px;
+        &__title {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        &__picture {
+            height: 150px;
+        }
+    }
+
+    .breadcrumbs {
+        &__back {
+            display: flex;
+            align-items: center;
+            color: $red;
+            fill: $red;
+            font-size: 14px;
+            svg {
+                width: 14px;
+                height: 8px;
+                transform: rotate(90deg);
+                margin: 0 5px 0 0;
+            }
+        }
+        &__list {
+            display: none;
+        }
+    }
+}
