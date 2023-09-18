@@ -149,19 +149,13 @@
                                             </svg>
                                             Є в наявності
                                         </div>
-                                        <!-- <div class="single-products-info__stock single-products-info__stock--out">
+                                        <div class="single-products-info__stock single-products-info__stock--out">
                                             <svg>
                                                 <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
                                             </svg>
                                             Немає в наявності
-                                        </div> -->
-                                    </div>
-                                    <!-- <div class="single-products-info__reviews j-scroll" data-scroll="#tab-reviews">
-                                        <div class="stars">
-                                            <div class="stars__stars j-stars-readonly" data-rating="2.5"></div>
-                                            <div class="stars__number">2</div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                     <div class="single-products-info__price">
                                         <!-- <div class="single-products-info__price-old">500 грн</div> -->
                                         <div class="single-products-info__price-new">1245 грн</div>
@@ -598,6 +592,9 @@
                     <input type="text" class="input input--small" required>
                 </label>
             </div>
+            <div class="modal__desc" style="color: #DF3021;">
+				<p>* Мінімальна сума замовлення на сайті 500 грн.!</p>
+			</div>
             <div class="modal__btns">
                 <div class="modal__btns-col">
                     <button type="submit" class="btn">Оформити замовлення</button>

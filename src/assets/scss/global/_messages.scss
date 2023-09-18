@@ -1,0 +1,44 @@
+.messages {
+    position: fixed;
+    top: 90px;
+    right: 0;
+    z-index: 100000000;
+    &__item {
+        border-radius: 10px 0 0 10px;
+        color: #fff;
+        font: 400 18px / 1.2 $font;
+        max-width: 320px;
+        min-height: 70px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px;
+        cursor: pointer;
+        display: none;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: .5s $trans;
+        &.active {
+            transform: none;
+            opacity: 1;
+        }
+        &--success {
+            background: green;
+            box-shadow: 0 10px 10px 0 rgba(green, .1);
+        }
+        &--error {
+            background: $red;
+            box-shadow: 0 10px 10px 0 rgba($red, .1);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .messages {
+        top: 60px;
+        &__item {
+            max-width: 300px;
+            font-size: 16px;
+        }
+    }
+}

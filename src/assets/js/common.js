@@ -307,7 +307,7 @@ $(function() {
 
 $('.j-catalog-menu-li').on('mouseover', function() {
 	let $this = $(this),
-		$submenu = $this.find('.j-catalog-menu-submenu');
+		$submenu = $this.find('> .j-catalog-menu-submenu');
 
 	if($window.width() > 1200) {
 		if($this.closest('.j-header-catalog').length == 0) {
@@ -322,7 +322,7 @@ $('.j-catalog-menu-li').on('mouseover', function() {
 
 $('.j-catalog-menu-li').on('mouseleave', function() {
 	let $this = $(this),
-		$submenu = $this.find('.j-catalog-menu-submenu');
+		$submenu = $this.find('> .j-catalog-menu-submenu');
 
 	if($window.width() > 1200) {
 		if($this.closest('.j-header-catalog').length == 0) {
@@ -336,7 +336,7 @@ $('.j-catalog-menu-li').on('mouseleave', function() {
 
 $('.j-catalog-menu-a').on('click', function(e) {
 	let $this = $(this),
-		$submenu = $this.closest('.j-catalog-menu-li').find('.j-catalog-menu-submenu');
+		$submenu = $this.siblings('.j-catalog-menu-submenu');
 	
 	if($window.width() <= 1200) {
 		if($this.closest('.j-header-catalog').length == 0) {
@@ -360,6 +360,22 @@ $('.j-catalog-menu-a').on('click', function(e) {
 		return false;
 	}
 });
+
+$('.j-catalog-menu-a-sub').on('click', function(e) {
+	e.preventDefault();
+
+	let $this = $(this),
+		$submenu = $this.siblings('.j-catalog-menu-submenu');
+
+	$submenu.addClass('active');
+});
+
+$('.j-catalog-menu-back').on('click', function() {
+	let $this = $(this),
+		$submenu = $this.closest('.j-catalog-menu-submenu');
+
+	$submenu.removeClass('active');
+})
 
 
 // banner-slider-----------------------------------------
@@ -632,6 +648,27 @@ $('.j-checkout-radio-bl input').on('change', function() {
 	$wrapper.addClass('active');
 });
 
+
+//show messages
+function show_message(item) {
+	$(item).show(function() {
+		$(item).addClass('active');
+	})
+}
+function hide_message(item) {
+	$(item)
+		.removeClass('active');
+
+	setTimeout(() => {
+		$(item).remove();
+	}, 500);
+}
+$('.j-messages-item').each(function() {
+	show_message(this);
+});
+$('.j-messages-item').on('click', function() {
+	hide_message(this);
+});
 
 //show after load page
 $('.header-catalog, .header__phones-time, .lang__list, .btn-nav__list').show();

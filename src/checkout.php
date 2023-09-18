@@ -34,7 +34,7 @@
                                     <div class="page-checkout__title">
                                         <span>1</span> Контактні дані
                                     </div>
-                                    <div class="page-checkout__bl-inner">
+                                    <form class="page-checkout__bl-inner j-form" novalidate>
                                         <ul class="page-checkout__tabs">
                                             <li class="page-checkout__tabs-li">
                                                 <button type="button" class="page-checkout__tabs-a btn btn--border-grey active">
@@ -47,9 +47,6 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <!-- <div class="page-checkout__info">
-                                            Іван Мазепа, +38 096 368 22 23, mazepa@gmail.com
-                                        </div> -->
                                         <div class="page-checkout__form-row">
                                             <div class="page-checkout__form-col">
                                                 <label class="label">
@@ -67,21 +64,38 @@
                                         <div class="page-checkout__form-row">
                                             <div class="page-checkout__form-col">
                                                 <label class="label">
-                                                    <span class="label__title">Мобільний телефон <span>*</span></span>
+                                                    <span class="label__title">Номер телефону <span>*</span></span>
                                                     <input type="tel" class="input j-phone" placeholder="+38 (___)-___-__-__" required>
                                                 </label>
                                             </div>
                                             <div class="page-checkout__form-col">
                                                 <label class="label">
-                                                    <span class="label__title">E-mail</span>
+                                                    <span class="label__title">Ел.пошта</span>
                                                     <input type="email" class="input">
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="page-checkout__save">
-                                            <button type="button" class="btn" disabled>Зберегти</button>
+                                        <div class="page-checkout__form-row">
+                                            <div class="page-checkout__form-col">
+                                                <div class="page-checkout__password j-password">
+                                                    <div class="modal-user__password-input">
+                                                        <label class="label">
+                                                            <span class="label__title">Придумайте пароль</span>
+                                                            <input type="password" class="input j-password-input" autocomplete="new-password" required>
+                                                        </label>
+                                                    </div>
+                                                    <button type="button" class="modal-user__password-icon j-password-btn">
+                                                        <svg>
+                                                            <use xlink:href="<?= $target; ?>/img/icons.svg#view"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="page-checkout__save">
+                                            <button type="submit" class="btn">зареєструватися</button>
+                                        </div>
+                                    </form>
                                     <button type="button" class="page-checkout__city" data-fancybox data-src="#city">
                                         <div class="page-checkout__city-icon">
                                             <svg>
@@ -192,24 +206,6 @@
                                                 <div class="radio__bl">
                                                     <div class="radio__check"></div>
                                                     <div class="radio__title">Самовивіз з Нової Пошти <span class="radio__price">99 грн</span></div>
-                                                </div>
-                                            </label>
-                                            <div class="page-checkout__radio-hidden">
-                                                <div class="page-checkout__radio-select">
-                                                    <select class="select j-select" data-search-placeholder="Введіть адресу або номер відділення" data-placeholder="Виберіть відповідне відділення">
-                                                        <option value=""></option>
-                                                        <option value="Віділення 1">Відділення 1</option>
-                                                        <option value="Віділення 1">Відділення 2</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="page-checkout__radio j-checkout-radio-bl">
-                                            <label class="radio">
-                                                <input type="radio" name="delivery">
-                                                <div class="radio__bl">
-                                                    <div class="radio__check"></div>
-                                                    <div class="radio__title">Самовивіз з Укрпошти <span class="radio__price">120 грн</span></div>
                                                 </div>
                                             </label>
                                             <div class="page-checkout__radio-hidden">
@@ -491,6 +487,28 @@
                 <label class="label">
                     <span class="label__title">Вкажіть населений пункт України <span>*</span></span>
                     <select class="select j-select" data-search-placeholder="Вкажіть населений пункт України" data-placeholder="Вкажіть населений пункт України">
+                        <option value="Одеса">Одеса</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Одеса">Одеса</option>
+                    </select>
+                </label>
+            </div>
+            <div class="modal__or">
+                <span>або</span>
+            </div>
+            <div class="modal__label">
+                <label class="label">
+                    <span class="label__title">Обрати з доданих адрес <span>*</span></span>
+                    <select class="select j-select" data-search-placeholder="Оберіть адресу" data-placeholder="Оберіть адресу">
                         <option value="Одеса">Одеса</option>
                         <option value="Київ">Київ</option>
                         <option value="Одеса">Одеса</option>

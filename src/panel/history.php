@@ -123,7 +123,7 @@ include '../templates/header.php'; ?>
                                             <div class="item-history__top-td">
                                                 <div class="item-history__top-hidden">Ціна</div>
                                                 <div class="item-history__price">
-                                                    <div class="item-history__price-old">1500 грн</div>
+                                                    <!-- <div class="item-history__price-old">1500 грн</div> -->
                                                     <div class="item-history__price-new">1245 грн</div>
                                                 </div>
                                             </div>
@@ -141,7 +141,6 @@ include '../templates/header.php'; ?>
                                                     </div>
                                                     <div class="item-history__content-desc">
                                                         <ul>
-                                                            <li>ТТН 20450429152209</li>
                                                             <li>Самовивіз з Нової Пошти</li>
                                                             <li>Дніпропетровська обл., Кам'янський р-н</li>
                                                             <li>Відділення №2, вул. Соборна (ран. Кірова), б.12</li>

@@ -83,6 +83,15 @@
             }
         }
     }
+    &__password {
+        display: flex;
+        .modal-user__password {
+            &-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
     &__info {
         color: $grey2;
         font: 400 14px / 1.2 $font;

@@ -82,27 +82,88 @@ include '../templates/header.php'; ?>
                         </div>
                         <h1 class="page__title title">Порівняння</h1>
                     </div>
+                    <? $catalog = [
+                        0 => [
+                            'title' => 'Алюмінієві системи',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu1.svg',
+                        ],
+                        1 => [
+                            'title' => 'Віконна фурнітура',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu2.svg',
+                        ],
+                        2 => [
+                            'title' => 'Дверна фурнітура',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu3.svg',
+                        ],
+                        3 => [
+                            'title' => 'Розсувні системи',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu4.png',
+                        ],
+                        4 => [
+                            'title' => 'Фурнітура для віконниць',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu5.png',
+                        ],
+                        5 => [
+                            'title' => 'Ущільнювачі',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu6.png',
+                        ],
+                        6 => [
+                            'title' => 'Монтажні матеріали',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu7.svg',
+                        ],
+                        7 => [
+                            'title' => 'Хімія для вікон та дверей',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu8.svg',
+                        ],
+                        8 => [
+                            'title' => 'Водовідливні профілі',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu9.svg',
+                        ],
+                        9 => [
+                            'title' => 'Зовнішні видливи',
+                            'url' => '/products.php',
+                            'icon' => $target . '/img/catalog-menu/catalog-menu10.svg',
+                        ],
+                    ]; ?>
+                    <div class="page-compare__categories">
+                        <ul class="page-compare__categories-list">
+                            <? foreach($catalog as $item) {
+                                $title = $item['title'];
+                                $url = $item['url'];
+                                $icon = $item['icon'];
+                            ?>
+                                <li class="page-compare__categories-li">
+                                    <a href="#" class="page-compare__categories-link">
+                                        <div class="page-compare__categories-icon">
+                                            <img src="<?= $icon; ?>" alt="">
+                                        </div>
+                                        <div class="page-compare__categories-title">
+                                            <?= $title; ?>
+                                        </div>
+                                    </a>
+                                </li>
+                            <? } ?>
+                        </ul>
+                    </div>
                     <div class="page-compare__nav">
                         <button type="button" class="page-compare__nav-item page-compare__nav-item--differents">
+                            <svg>
+                                <use xlink:href="<?= $target; ?>/img/icons.svg#only-compare"/>
+                            </svg>
                             Тільки відмінності
                         </button>
-                        <div class="page-compare__nav-right">
-                            <a href="/products.php" class="page-compare__nav-item">
-                                + Додати ще модель
-                            </a>
-                            <button type="button" data-fancybox data-src="#compare-list" class="page-compare__nav-item page-compare__nav-item--compare">
-                                <svg>
-                                    <use xlink:href="<?= $target; ?>/img/icons.svg#compare"/>
-                                </svg>
-                                Списки порівнянь
-                            </button>
-                            <button type="button" class="page-compare__nav-item page-compare__nav-item--share">
-                                <svg>
-                                    <use xlink:href="<?= $target; ?>/img/icons.svg#url"/>
-                                </svg>
-                                Поділитись списком
-                            </button>
-                        </div>
+                        <a href="/products.php" class="page-compare__nav-item">
+                            + Додати ще модель
+                        </a>
                     </div>
                     <div class="page-compare__products">
                         <? for($i = 0; $i < 2; $i++) { ?> 

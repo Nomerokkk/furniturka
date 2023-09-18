@@ -136,9 +136,7 @@ include '../templates/header.php'; ?>
                                         </svg>
                                         Видалити
                                     </button>
-                                    <button type="button" class="item-wishlist__nav-btn j-copy-url active-btn" data-url="http://localhost:3000/panel/wishlist.php">
-                                        Скопіювати посилання
-                                    </button>
+                               
                                     <div class="item-wishlist__nav-select">
                                         <label class="select-standart">
                                             <select class="select-standart__select">

@@ -22,8 +22,8 @@
         background: transparent;
         color: $grey;
         &:hover {
-            background: rgba($red, .2);
-            color: $red;
+            background: rgba(#000, .05);
+            color: #000;
         }
     }
     &--cart {

@@ -409,7 +409,7 @@
 						</label>
 					</div>
 					<div class="modal-user__btns">
-						<button type="submit" class="btn">
+						<button type="submit" class="btn" data-fancybox data-src="#new-password">
 							отримати тимчасовий пароль
 						</button>
 						<div class="modal-user__btns-link">
@@ -501,7 +501,7 @@
 						Реєструючись, ви погоджуєтеся з умовами <a href="#">положення про обробку і захист персональних даних</a> та <a href="#">угодою користувача</a>
 					</div>
 					<div class="modal-user__btns">
-						<button type="submit" class="btn">
+						<button type="submit" class="btn" data-fancybox data-src="#code">
 							зареєструватися
 						</button>
 						<div class="modal-user__btns-link">
@@ -539,6 +539,65 @@
 						</li>
 					</ul>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-code" id="code">
+		<div class="modal__top">
+			<div class="modal__title">
+				Ведіть код з телефону
+			</div>
+		</div>
+		<div class="modal__content">
+			<form class="modal-form__code j-form" novalidate>
+				<div class="modal__label">
+					<label class="label">
+						<span class="label__title">Код</span>
+						<input type="text" class="input input--small" required>
+					</label>
+				</div>
+				<div class="modal-code__get">
+					<div class="modal-code__get-link">
+						Запросити повторно
+					</div>
+				</div>
+				<div class="modal__btn">
+					<button type="submit" class="btn">
+						підтвердити
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal-code" id="new-password">
+		<div class="modal__top">
+			<div class="modal__title">
+				Відправили пароль
+			</div>
+		</div>
+		<div class="modal__content">
+			<div class="modal-code__desc">
+				Ми відправили вам за номером телефону 38050*****21 або в Viber тимчасовий пароль.
+			</div>
+			<div class="modal__btn">
+				<button type="button" class="btn" data-fancybox data-src="#sign-in">
+					Вхід
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="messages j-messages">
+		<div class="messages__item messages__item--success j-messages-item">
+			<div class="messages__inner">
+				Ви успішно зареєстровані на сайті.
+			</div>
+		</div>
+		<div class="messages__item messages__item--error j-messages-item">
+			<div class="messages__inner">
+				Нажаль, виникла помилка під час збереження.
 			</div>
 		</div>
 	</div>

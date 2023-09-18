@@ -8,7 +8,7 @@
     <div class="item-news__text">
         <div class="item-news__date">12.04.2023</div>
         <div class="item-news__title title">
-            Дверні замки MACO Дверні замки MACO Дверні замки MACO
+            <?= $title; ?>
         </div>
     </div>
 </a>
