@@ -134,7 +134,7 @@ include '../templates/header.php'; ?>
                                     <div class="col">
                                         <label class="label">
                                             <span class="label__title">Місто</span>
-                                            <select class="select j-select" data-search-placeholder="Вкажіть населений пункт України" data-placeholder="Вкажіть населений пункт України">
+                                            <select class="select j-select" data-search-placeholder="Вкажіть населений пункт України">
                                                 <option value="Одеса">Одеса</option>
                                                 <option value="Київ">Київ</option>
                                                 <option value="Одеса">Одеса</option>
@@ -148,27 +148,37 @@ include '../templates/header.php'; ?>
                                                 <option value="Одеса">Одеса</option>
                                                 <option value="Одеса">Одеса</option>
                                             </select>
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <label class="label">
-                                            <span class="label__title">Індекс УкрПочти</span>
-                                            <input type="text" class="input input--small" value="12343" required>
                                         </label>
                                     </div>
                                     <div class="col">
                                         <label class="label">
                                             <span class="label__title">Відділення НП </span>
-                                            <select class="select j-select" data-search-placeholder="Введіть адресу або назву відділення Нової Пошти" data-placeholder="Виберіть відповідне відділення">
+                                            <select class="select j-select" data-search-placeholder="Введіть адресу або назву відділення Нової Пошти">
                                                 <option value="Віділення 1">Відділення 1</option>
                                                 <option value="Віділення 1">Відділення 2</option>
                                             </select>
                                         </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col col--street">
                                         <label class="label">
-                                            <span class="label__title">Адреса</span>
-                                            <input type="text" class="input input--small" value="вул. Визволителів, буд. 5" required>
+                                            <span class="label__title">Вулиця</span>
+                                            <select class="select j-select" data-search-placeholder="Введіть назву вулиці" data-placeholder="Виберіть вулицю">
+                                                <option value=""></option>
+                                                <option value="Вулиця 1">Вулиця 1</option>
+                                                <option value="Вулиця 1">Вулиця 2</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="col col--house">
+                                        <label class="label">
+                                            <span class="label__title">Будинок</span>
+                                            <input type="text" class="input" required>
+                                        </label>
+                                    </div>
+                                    <div class="col col--apartment">
+                                        <label class="label">
+                                            <span class="label__title">Квартира</span>
+                                            <input type="text" class="input" required>
                                         </label>
                                     </div>
                                 </div>
@@ -199,12 +209,6 @@ include '../templates/header.php'; ?>
                                     </div>
                                     <div class="col">
                                         <label class="label">
-                                            <span class="label__title">Індекс УкрПочти</span>
-                                            <input type="text" class="input input--small" value="12343" required>
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <label class="label">
                                             <span class="label__title">Відділення НП </span>
                                             <select class="select j-select" data-search-placeholder="Введіть адресу або назву відділення Нової Пошти">
                                                 <option value="Віділення 1">Відділення 1</option>
@@ -212,10 +216,26 @@ include '../templates/header.php'; ?>
                                             </select>
                                         </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col col--street">
                                         <label class="label">
-                                            <span class="label__title">Адреса</span>
-                                            <input type="text" class="input input--small" value="вул. Визволителів, буд. 5" required>
+                                            <span class="label__title">Вулиця</span>
+                                            <select class="select j-select" data-search-placeholder="Введіть назву вулиці" data-placeholder="Виберіть вулицю">
+                                                <option value=""></option>
+                                                <option value="Вулиця 1">Вулиця 1</option>
+                                                <option value="Вулиця 1">Вулиця 2</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="col col--house">
+                                        <label class="label">
+                                            <span class="label__title">Будинок</span>
+                                            <input type="text" class="input" required>
+                                        </label>
+                                    </div>
+                                    <div class="col col--apartment">
+                                        <label class="label">
+                                            <span class="label__title">Квартира</span>
+                                            <input type="text" class="input" required>
                                         </label>
                                     </div>
                                 </div>

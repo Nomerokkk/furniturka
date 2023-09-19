@@ -8,6 +8,12 @@
     .col {
         width: 50%;
         padding: 10px;
+        &--house {
+            width: 25%;
+        }
+        &--apartment {
+            width: 25%;
+        }
     }
     &__item {
 
@@ -49,6 +55,12 @@
     .page-panel-info {
         .col {
             width: 100%;
+            &--house {
+                width: 50%;
+            }
+            &--apartment {
+                width: 50%;
+            }
         }
     }
 }

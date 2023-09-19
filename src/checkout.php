@@ -261,24 +261,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="page-checkout__form-row">
-                                                    <div class="page-checkout__form-col">
-                                                        <label class="label">
-                                                            <span class="label__title">Поверх</span>
-                                                            <input type="text" class="input">
-                                                        </label>
-                                                    </div>
-                                                    <div class="page-checkout__form-col">
-                                                        <label class="label">
-                                                            <span class="label__title">Вулиця <span>*</span></span>
-                                                            <select class="select j-select" data-search-placeholder="" data-placeholder="Наявність вантажного ліфта">
-                                                                <option value=""></option>
-                                                                <option value="Вулиця 1">Відсутній</option>
-                                                                <option value="Вулиця 1">Присутній</option>
-                                                            </select>
-                                                        </label>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

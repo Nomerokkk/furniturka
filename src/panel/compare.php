@@ -136,13 +136,13 @@ include '../templates/header.php'; ?>
                     ]; ?>
                     <div class="page-compare__categories">
                         <ul class="page-compare__categories-list">
-                            <? foreach($catalog as $item) {
+                            <? foreach($catalog as $i => $item) {
                                 $title = $item['title'];
                                 $url = $item['url'];
                                 $icon = $item['icon'];
                             ?>
                                 <li class="page-compare__categories-li">
-                                    <a href="#" class="page-compare__categories-link">
+                                    <a href="#" class="page-compare__categories-link <?= ($i == 1) ? 'active' : ''; ?>">
                                         <div class="page-compare__categories-icon">
                                             <img src="<?= $icon; ?>" alt="">
                                         </div>
@@ -165,6 +165,9 @@ include '../templates/header.php'; ?>
                             + Додати ще модель
                         </a>
                     </div>
+                    <h2 class="page-compare__title-category title">
+                        Віконна фурнітура
+                    </h2>
                     <div class="page-compare__products">
                         <? for($i = 0; $i < 2; $i++) { ?> 
                             <div class="item-compare">
