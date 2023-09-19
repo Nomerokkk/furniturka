@@ -223,7 +223,7 @@
                         <div class="col">
                             <div class="item-action">
                                 <picture class="item-action__picture">
-                                    <img src="<?= $img; ?>" alt="">
+                                    <img src="<?= $img; ?>" alt="" loading="lazy">
                                 </picture>
                                 <div class="item-action__content">
                                     <div class="item-action__text">
@@ -264,7 +264,7 @@
                         <? for($i = 1; $i < 11; $i++) { ?>
                             <div class="col">
                                 <div class="item-brands">
-                                    <img src="<?= $target; ?>/img-webp/brands/brands<?= $i; ?>.webp" alt="">
+                                    <img src="<?= $target; ?>/img-webp/brands/brands<?= $i; ?>.webp" alt="" width="1" height="1">
                                 </div>
                             </div>
                         <? } ?>

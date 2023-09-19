@@ -1,7 +1,7 @@
 <div class="item-products-basket">
     <div class="item-products-basket__inner">
         <a href="/single-products.php" class="item-products-basket__img">
-            <img src="<?= $target; ?>/img/products/products1.jpg" alt="">
+            <img src="<?= $target; ?>/img/products/products1.jpg" alt="" loading="lazy">
         </a>
         <a href="/single-products.php" class="item-products-basket__text">
             <div class="item-products-basket__title">

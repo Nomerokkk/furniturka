@@ -30,7 +30,7 @@
             <div class="preims__col">
                 <div class="preims__item">
                     <div class="preims__icon">
-                        <img src="<?= $icon; ?>" alt="">
+                        <img src="<?= $icon; ?>" alt="" width="1" height="1">
                     </div>
                     <div class="preims__text">
                         <div class="preims__title">

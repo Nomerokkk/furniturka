@@ -29,9 +29,9 @@
             }
         }
         &--out {
-            background: rgba($red, .2);
-            color: $red;
-            fill: $red;
+            background: rgba(#000, .05);
+            color: $grey2;
+            fill: $grey2;
             svg {
                 width: 10px;
                 height: 10px;

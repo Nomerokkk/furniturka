@@ -4,7 +4,7 @@
 					<div class="footer__row">
 						<div class="footer__col footer__col--one">
 							<a href="/" class="footer__logo" title="Furniturka">
-								<img src="<?= $target; ?>/img/logo.svg" alt="">
+								<img src="<?= $target; ?>/img/logo.svg" alt="" width="1" height="1">
 							</a>
 							<div class="footer__social">
 								<? include 'social.php'; ?>
@@ -225,27 +225,27 @@
 						<ul class="payments">
 							<li class="payments__li">
 								<div class="payments__item">
-									<img src="<?= $target; ?>/img/payments/visa.svg" alt="">
+									<img src="<?= $target; ?>/img/payments/visa.svg" alt="" width="1" height="1">
 								</div>
 							</li>
 							<li class="payments__li">
 								<div class="payments__item">
-									<img src="<?= $target; ?>/img/payments/privat.svg" alt="">
+									<img src="<?= $target; ?>/img/payments/privat.svg" alt="" width="1" height="1">
 								</div>
 							</li>
 							<li class="payments__li">
 								<div class="payments__item">
-									<img src="<?= $target; ?>/img/payments/mastercard.svg" alt="">
+									<img src="<?= $target; ?>/img/payments/mastercard.svg" alt="" width="1" height="1">
 								</div>
 							</li>
 							<li class="payments__li">
 								<div class="payments__item">
-									<img src="<?= $target; ?>/img/payments/novaposhta.svg" alt="">
+									<img src="<?= $target; ?>/img/payments/novaposhta.svg" alt="" width="1" height="1">
 								</div>
 							</li>
 							<li class="payments__li">
 								<div class="payments__item">
-									<img src="<?= $target; ?>/img/payments/ukrposhta.svg" alt="">
+									<img src="<?= $target; ?>/img/payments/ukrposhta.svg" alt="" width="1" height="1">
 								</div>
 							</li>
 						</ul>
@@ -258,7 +258,7 @@
 							Розробка сайту
 						</div>
 						<div class="copyright__create-img">
-							<img src="<?= $target; ?>/img/shafem.svg" alt="">
+							<img src="<?= $target; ?>/img/shafem.svg" alt="" width="1" height="1">
 						</div>
 					</a>
 				</div>
@@ -370,7 +370,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/facebook.svg" alt="">
+									<img src="<?= $target; ?>/img/facebook.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Facebook
@@ -380,7 +380,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/google.svg" alt="">
+									<img src="<?= $target; ?>/img/google.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Google
@@ -428,7 +428,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/facebook.svg" alt="">
+									<img src="<?= $target; ?>/img/facebook.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Facebook
@@ -438,7 +438,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/google.svg" alt="">
+									<img src="<?= $target; ?>/img/google.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Google
@@ -520,7 +520,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/facebook.svg" alt="">
+									<img src="<?= $target; ?>/img/facebook.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Facebook
@@ -530,7 +530,7 @@
 						<li class="modal-user__social-li">
 							<button type="button" class="modal-user__social-item">
 								<div class="modal-user__social-icon">
-									<img src="<?= $target; ?>/img/google.svg" alt="">
+									<img src="<?= $target; ?>/img/google.svg" alt="" width="1" height="1">
 								</div>
 								<div class="modal-user__social-name">
 									Google
@@ -589,7 +589,7 @@
 		</div>
 	</div>
 	
-	<div class="messages j-messages">
+	<!-- <div class="messages j-messages">
 		<div class="messages__item messages__item--success j-messages-item">
 			<div class="messages__inner">
 				Ви успішно зареєстровані на сайті.
@@ -600,17 +600,16 @@
 				Нажаль, виникла помилка під час збереження.
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<script>
 		const target = '<?= $target; ?>',
 			lang = 'ua';
 	</script>
 	
+	<link rel="stylesheet" href="<?= $target; ?>/css/style-after.css">
+
 	<script src="<?= $target; ?>/libs/jquery.min.js"></script>
-	<script src="<?= $target; ?>/libs/gsap/gsap.min.js"></script>
-	<script src="<?= $target; ?>/libs/gsap/ScrollTrigger.min.js"></script>
-	<script src="<?= $target; ?>/libs/gsap/ScrollToPlugin.min.js"></script>
 	<script src="<?= $target; ?>/libs/swiper/swiper.min.js"></script>
 	<script src="<?= $target; ?>/libs/lazy/jquery.lazy.min.js"></script>
 	<script src="<?= $target; ?>/libs/lazy/plugins/jquery.lazy.picture.min.js"></script>
@@ -621,7 +620,6 @@
 	<script src="<?= $target; ?>/libs/range.min.js"></script>
 	<script src="<?= $target; ?>/libs/select2.min.js"></script>
 	<script src="<?= $target; ?>/js/common.js"></script>
-	<script src="<?= $target; ?>/js/animation.js"></script>
 	<script src="<?= $target; ?>/libs/form/jbvalidate.min.js"></script>
 	<script src="<?= $target; ?>/js/form.js"></script>
 </body>

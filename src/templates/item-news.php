@@ -1,7 +1,7 @@
 <a href="single-news.php" class="item-news">
     <div class="item-news__img">
         <picture class="item-news__picture">
-            <img src="<?= $target; ?>/img-webp/news/news1.webp" alt="">
+            <img src="<?= $target; ?>/img-webp/news/news1.webp" alt="" loading="lazy">
         </picture>
         <button type="button" class="btn">Дізнатися більше</button>
     </div>

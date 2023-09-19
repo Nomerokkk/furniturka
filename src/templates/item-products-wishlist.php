@@ -25,7 +25,7 @@
         </div>
         <a href="/single-products.php" class="item-products__img">
             <picture class="item-products__picture">
-                <img src="<?= $target; ?>/img/products/products1.jpg" alt="">
+                <img src="<?= $target; ?>/img/products/products1.jpg" alt="" loading="lazy">
             </picture>
         </a>
         <a href="/single-products.php" class="item-products__title">

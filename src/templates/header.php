@@ -1,5 +1,4 @@
-<? global $target;
-
+<? 
 	$target = '/assets';
 ?>
 
@@ -9,17 +8,13 @@
 	<meta charset="UTF-8">
 	<title>Furniturka</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="description" content="This is an example of a meta description. This will often show up in search results.">
 	<link rel="apple-touch-icon" sizes="180x180" href="<?= $target; ?>/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?= $target; ?>/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?= $target; ?>/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="<?= $target; ?>/img/favicon/site.webmanifest">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 	
 	<style>
 		* {
@@ -31,7 +26,7 @@
 		}
 	</style>
 
-	<link rel="stylesheet" href="<?= $target; ?>/css/style.css">
+	<? include 'style.php'; ?>
 </head>
 <body class="j-body preload">
 	<div class="wrapper">
@@ -44,7 +39,7 @@
 						</div>
 					</button>
 					<a href="/" class="header__logo" title="Furniturka">
-						<img src="<?= $target; ?>/img/logo.svg" alt="">
+						<img src="<?= $target; ?>/img/logo.svg" alt="" width="1" height="1">
 					</a>
 					<button type="button" class="header__catalog" data-target=".header-catalog, .j-overlay-width-header">
 						<div class="header__catalog-icon">
@@ -167,7 +162,7 @@
 		<div class="menu" style="transform: translateX(-120%);">
 			<div class="menu__top active-target" data-target=".menu, .j-overlay">
 				<div class="menu__top-logo">
-					<img src="<?= $target; ?>/img/logo.svg" alt="">
+					<img src="<?= $target; ?>/img/logo.svg" alt="" width="1" height="1">
 				</div>
 				<button type="button" class="menu__top-close" title="Закрити">
 					<svg>
@@ -305,7 +300,7 @@
 								</li>
 								<li class="menu__info-li">
 									<div class="menu__info-a active">
-										<img src="<?= $target; ?>/img/ua.svg" class="menu__info-img" alt=""> ua
+										<img src="<?= $target; ?>/img/ua.svg" class="menu__info-img" alt="" width="1" height="1"> ua
 									</div>
 								</li>
 							</ul>
@@ -391,12 +386,12 @@
 				<ul class="menu__app">
 					<li class="menu__app-li">
 						<a href="#" class="menu__app-a" target="_blank" title="Google Play">
-							<img src="<?= $target; ?>/img/google-app.svg" alt="">
+							<img src="<?= $target; ?>/img/google-app.svg" alt="" width="1" height="1">
 						</a>
 					</li>
 					<li class="menu__app-li">
 						<a href="#" class="menu__app-a" target="_blank" title="App Store">
-							<img src="<?= $target; ?>/img/apple-app.svg" alt="">
+							<img src="<?= $target; ?>/img/apple-app.svg" alt="" width="1" height="1">
 						</a>
 					</li>
 				</ul>
