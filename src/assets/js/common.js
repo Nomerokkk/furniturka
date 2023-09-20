@@ -425,15 +425,15 @@ $('.j-stars').starRating({
 	useGradient: false,
 	disableAfterRate: false,
 });
-$('.j-stars-readonly').starRating({
-	initialRating: 4,
-	strokeColor: '#894A00',
-	strokeWidth: 0,
-	starSize: 24,
-	emptyColor: '#BDBCBC',
-	useGradient: false,
-	readOnly: true,
-});
+// $('.j-stars-readonly').starRating({
+// 	initialRating: 4,
+// 	strokeColor: '#894A00',
+// 	strokeWidth: 0,
+// 	starSize: 24,
+// 	emptyColor: '#BDBCBC',
+// 	useGradient: false,
+// 	readOnly: true,
+// });
 
 
 

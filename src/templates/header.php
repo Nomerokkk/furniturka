@@ -26,7 +26,7 @@
 		}
 	</style>
 
-	<? include 'style.php'; ?>
+	<link rel="stylesheet" href="<?= $target; ?>/css/style.css">
 </head>
 <body class="j-body preload">
 	<div class="wrapper">

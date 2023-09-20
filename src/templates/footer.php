@@ -607,8 +607,6 @@
 			lang = 'ua';
 	</script>
 	
-	<link rel="stylesheet" href="<?= $target; ?>/css/style-after.css">
-
 	<script src="<?= $target; ?>/libs/jquery.min.js"></script>
 	<script src="<?= $target; ?>/libs/swiper/swiper.min.js"></script>
 	<script src="<?= $target; ?>/libs/lazy/jquery.lazy.min.js"></script>

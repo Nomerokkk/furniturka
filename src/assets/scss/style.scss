@@ -11,6 +11,8 @@
 
 //home
 @import 'home/_banner.scss';
+@import 'home/_preims.scss';
+@import 'home/_brands.scss';
 
 @import 'global/_page.scss';
 @import 'global/_section.scss';
@@ -23,3 +25,61 @@
 @import 'global/_form.scss';
 @import 'global/_tabs.scss';
 @import 'global/_info.scss';
+
+//products
+@import 'products/_page-products.scss';
+@import 'products/_filter.scss';
+
+//single-products
+@import 'single-products/_page-single-products.scss';
+@import 'single-products/_tabs-single-products.scss';
+@import 'single-products/_single-products-info.scss';
+@import 'single-products/_product-gallery.scss';
+@import 'single-products/_characteristics.scss';
+@import 'single-products/_videos.scss';
+@import 'single-products/_reviews.scss';
+@import 'items/_item-reviews.scss';
+@import 'items/_item-accordion.scss';
+@import 'items/_item-products-basket.scss';
+
+//checkout
+@import 'checkout/_page-checkout.scss';
+
+//about
+@import 'about/_page-about.scss';
+
+//brands
+@import 'brands/_page-brands.scss';
+
+//delivery-payments
+@import 'delivery-payments/_page-delivery.scss';
+
+//news page
+@import 'news/_page-news.scss';
+@import 'news/_page-single-news.scss';
+
+//contacts
+@import 'contacts/_page-contacts.scss';
+
+//downloads
+@import 'downloads/_page-downloads.scss';
+
+//panel
+@import 'panel/_sidebar-panel.scss';
+@import 'panel/_page-panel-info.scss';
+@import 'panel/_page-wishlist.scss';
+@import 'panel/_page-history.scss';
+@import 'panel/_page-compare.scss';
+@import 'items/item-compare.scss';
+
+//ok
+@import 'ok/_page-ok.scss';
+
+@import 'global/_select.scss';
+@import 'global/_pagination.scss';
+@import 'global/_menu.scss';
+@import 'global/_social.scss';
+@import 'global/_subscribe.scss';
+@import 'global/_footer.scss';
+@import 'global/_messages.scss';
+@import 'global/_modal.scss';
