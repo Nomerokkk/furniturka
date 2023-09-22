@@ -160,19 +160,14 @@
                             </svg>
                         </button>
                         <div class="sort">
-                            <label class="select-standart">
-                                <select class="select-standart__select">
-                                    <option value="За рейтингом">За рейтингом</option>
-                                    <option value="Від дешевих до дорогих">Від дешевих до дорогих</option>
-                                    <option value="Від дорогих до дешевих">Від дорогих до дешевих</option>
-                                    <option value="Популярні">Популярні</option>
-                                    <option value="Акційні">Акційні</option>
-                                    <option value="Новинки">Новинки</option>
-                                </select>
-                                <svg>
-                                    <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
-                                </svg>
-                            </label>
+                            <select class="select j-select">
+                                <option value="За рейтингом">За рейтингом</option>
+                                <option value="Від дешевих до дорогих">Від дешевих до дорогих</option>
+                                <option value="Від дорогих до дешевих">Від дорогих до дешевих</option>
+                                <option value="Популярні">Популярні</option>
+                                <option value="Акційні">Акційні</option>
+                                <option value="Новинки">Новинки</option>
+                            </select>
                         </div>
                     </div>
                     <div class="page-products__wrapper">
