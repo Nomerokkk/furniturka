@@ -23,7 +23,7 @@
             </picture>
         </a>
         <a href="/single-products.php" class="item-products__title" title="<?= $title; ?>">
-            Ущільнювач удаваний чорний (Саламандер)
+            Ущільнювач удаваний чорний (Саламандер) Ущільнювач удаваний чорний (Саламандер)
         </a>
         <div class="item-products__absolute">
             <a href="/single-products.php#reviews" class="item-products__reviews" title="<?= $title; ?>">

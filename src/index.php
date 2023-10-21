@@ -79,6 +79,7 @@
                             'btn' => 'Перейти до каталогу',
                             'img' => $target . '/img-webp/action/action1.webp',
                             'url' => 'products.php',
+                            'desc' => '',
                         ],
                         1 => [
                             'title' => 'Рекомендуємо',
@@ -86,6 +87,7 @@
                             'btn' => 'Перейти до каталогу',
                             'img' => $target . '/img-webp/action/action2.webp',
                             'url' => 'products.php',
+                            'desc' => '',
                         ],
                     ];
                     foreach($action as $item) {

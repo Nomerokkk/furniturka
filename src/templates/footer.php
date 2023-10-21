@@ -589,10 +589,10 @@
 		</div>
 	</div>
 	
-	<!-- <div class="messages j-messages">
+	<div class="messages j-messages">
 		<div class="messages__item messages__item--success j-messages-item">
 			<div class="messages__inner">
-				Ви успішно зареєстровані на сайті.
+				Товар добавлен в сравнение
 			</div>
 		</div>
 		<div class="messages__item messages__item--error j-messages-item">
@@ -600,7 +600,7 @@
 				Нажаль, виникла помилка під час збереження.
 			</div>
 		</div>
-	</div> -->
+	</div>
 	
 	<script>
 		const target = '<?= $target; ?>',

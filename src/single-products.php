@@ -41,10 +41,12 @@
                                 0 => [
                                     'title' => 'Опис',
                                     'id' => 'tab-description',
+                                    'count' => '',
                                 ],
                                 1 => [
                                     'title' => 'Характеристики',
                                     'id' => 'tab-characteristics',
+                                    'count' => '',
                                 ],
                                 2 => [
                                     'title' => 'Відгуки',
