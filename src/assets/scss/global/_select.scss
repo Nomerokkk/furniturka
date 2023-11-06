@@ -54,6 +54,9 @@ select.select {
         overflow: hidden;
     }
     &-search {
+        &--hide {
+            display: none;
+        }
         &__field {
             @extend .input;
             height: 44px;
@@ -70,10 +73,10 @@ select.select {
             padding: 10px 15px;
             cursor: pointer;
             &:hover {
-                background: rgba($red, .05);
+                background: rgba(#000, .03);
             }
             &--selected {
-                background: rgba($red, .1);
+                background: rgba(#000, .06);
             }
         }
     }

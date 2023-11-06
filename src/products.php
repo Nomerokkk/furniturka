@@ -160,7 +160,7 @@
                             </svg>
                         </button>
                         <div class="sort">
-                            <select class="select j-select">
+                            <select class="select j-select" data-minimum-results-for-search="Infinity">
                                 <option value="За рейтингом">За рейтингом</option>
                                 <option value="Від дешевих до дорогих">Від дешевих до дорогих</option>
                                 <option value="Від дорогих до дешевих">Від дорогих до дешевих</option>
