@@ -20,6 +20,12 @@
 }
 
 @media screen and (max-width: 1400px) {
+    .page-products {
+        .col {
+            width: 25%;
+        }
+    }
+
     .sort {
         width: 33.333%;
     }
@@ -29,6 +35,9 @@
     .page-products {
         &__info {
             flex-wrap: wrap;
+        }
+        .col {
+            width: 33.3333%;
         }
     }
 
@@ -46,6 +55,7 @@
         }
         .col {
             padding: 2.5px;
+            width: 50%;
         }
     }
 }

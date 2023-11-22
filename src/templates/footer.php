@@ -618,6 +618,7 @@
 	<script src="<?= $target; ?>/libs/range.min.js"></script>
 	<script src="<?= $target; ?>/libs/select2.min.js"></script>
 	<script src="<?= $target; ?>/js/common.js"></script>
+	<script src="<?= $target; ?>/js/catalog-menu.js"></script>
 	<script src="<?= $target; ?>/libs/form/jbvalidate.min.js"></script>
 	<script src="<?= $target; ?>/js/form.js"></script>
 </body>

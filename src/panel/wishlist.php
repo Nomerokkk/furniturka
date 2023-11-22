@@ -151,7 +151,7 @@ include '../templates/header.php'; ?>
                                     </div>
                                 </div>
                                 <div class="item-wishlist__products">
-                                    <div class="row row--4">
+                                    <div class="row row--5">
                                         <? for($i = 0; $i < 3; $i++) { ?>
                                             <div class="col">
                                                 <? include '../templates/item-products-wishlist.php'; ?>

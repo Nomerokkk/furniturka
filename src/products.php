@@ -170,9 +170,41 @@
                             </select>
                         </div>
                     </div>
+                    <div class="subcategory">
+                        <div class="subcategory__row">
+                            <? $submenu2 = [
+                                0 => 'Фрикційні ножниці',
+                                1 => 'Противовзломная фурнитура МACO',
+                                2 => 'Фурнитура МACO серия КOMFORT',
+                                3 => 'Фурнитура МACO серия MAMMUT',
+                                4 => 'Фурнитура МACO серия TWIN-FIT',
+                                5 => 'Фурнитура МACO RUSTICO для ставней',
+                                6 => 'Ограничитель поворота окна МАСО с тормозом',
+                                7 => 'Петли МАСО для многостворчатых распашных окон',
+                                8 => 'Cкрытые ручки МАСО TENTAZIONE',
+                                9 => 'Cкрытая фурнитура МАСО серия INVISIBLE на 80 кг',
+                                10 => 'Скрытая фурнитура MАСО серия Multi Power на 150 кг',
+                                11 => 'Фурнитура HAUTAU - решение нестандартов',
+                            ];
+                            foreach($submenu2 as $item) { 
+                                $title = $item;    
+                            ?>
+                                <div class="subcategory__col">
+                                    <a href="/products.php" class="subcategory__item">
+                                        <div class="subcategory__img">
+                                            <img src="<?= $target; ?>/img-webp/products/products1.webp" alt="">
+                                        </div>
+                                        <div class="subcategory__title">
+                                            <?= $title; ?>
+                                        </div>
+                                    </a>
+                                </div>
+                            <? } ?>
+                        </div>
+                    </div>
                     <div class="page-products__wrapper">
-                        <div class="row row--4">
-                            <? for($i = 0; $i < 16; $i++) { ?>
+                        <div class="row row--5">
+                            <? for($i = 0; $i < 20; $i++) { ?>
                                 <div class="col">
                                     <? include 'templates/item-products.php'; ?>
                                 </div>

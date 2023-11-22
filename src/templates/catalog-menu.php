@@ -72,6 +72,7 @@
 							</svg>
                         </div>
                     </a>
+                    <div class="catalog-menu__submenu j-catalog-menu-submenu"></div>
                 </li>
             <? } ?>
         </ul>

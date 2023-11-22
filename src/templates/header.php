@@ -234,18 +234,6 @@
 					</ul>
 				</li>
 				<li class="menu__menu-li">
-					<a href="#" class="menu__menu-item">
-						<div class="menu__menu-icon menu__menu-icon--chat">
-							<svg>
-								<use xlink:href="<?= $target; ?>/img/icons.svg#chat"/>
-							</svg>
-						</div>
-						<div class="menu__menu-title">
-							Чат з FURNITURKA
-						</div>
-					</a>
-				</li>
-				<li class="menu__menu-li">
 					<button type="button" class="menu__menu-item" data-fancybox data-src="#basket">
 						<div class="menu__menu-icon menu__menu-icon--cart">
 							<svg>

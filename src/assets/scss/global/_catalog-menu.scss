@@ -1,5 +1,5 @@
 .catalog-menu {
-    width: 280px;
+    width: 260px;
     position: relative;
     z-index: 60;
     &__nav {
@@ -21,6 +21,7 @@
             height: 55px;
             fill: $grey;
             padding: 0 15px 0 12px;
+            margin: 0 -1px 0 0;
             &:hover,
             &.active {
                 color: $red;
@@ -42,6 +43,7 @@
         }
         &-arrow {
             margin: 0 0 0 auto;
+            flex-shrink: 0;
             svg {
                 width: 14px;
                 height: 8px;
@@ -54,18 +56,15 @@
         left: 100%;
         top: 0;
         bottom: 0;
-        width: calc(1470px - 280px);
+        width: calc(1470px - 260px);
         background: #fff;
         border-radius: 0 10px 10px 0;
         overflow-y: auto;
-        display: none;
         padding: 10px;
+        display: none;
         &--children {
             z-index: 1111;
             left: 0;
-        }
-        &.active {
-            display: block;
         }
         &-list {
             display: flex;
@@ -73,7 +72,6 @@
         }
         &-li {
             width: 16.666%;
-            margin: 0 0 20px;
         }
         &-a {
             display: block;
@@ -84,29 +82,59 @@
                 box-shadow: 0 0 30px 0 rgba(#000, .1);
                 color: #000;
             }
+            &--all {
+                font-weight: 700;
+            }
         }
         &-img {
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100px;
+            height: 90px;
             img {
                 @extend .fit-contain;
+                object-position: left center;
             }
         }
         &-title {
             margin: 10px 0 0;
         }
+        &-top {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font: 400 20px / 1.2 $font;
+            margin: 10px 0;
+            background: rgba(#000, .03);
+            border-radius: 5px;
+        }
+        &-category {
+            font-weight: 500;
+            margin: 0 0 0 30px;
+            display: flex;
+            min-width: 0;
+            span {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0 7px 0 0;
+            }
+            a {
+                color: $red;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
     }
     &__back {
-        margin: 10px 0px;
         &-link {
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             fill: #000;
             transition: .3s $trans;
-            font: 400 20px / 1 $font;
             fill: $red;
             color: $red;
             &:hover {
@@ -119,6 +147,12 @@
             height: 8px;
             transform: rotate(90deg);
             margin: 0 10px 0 0;
+        }
+        &--close {
+            svg {
+                width: 14px;
+                height: 14px;
+            }
         }
     }
     &__submenu2 {
@@ -157,7 +191,7 @@
 @media screen and (max-width: 1540px) {
     .catalog-menu {
         &__submenu {
-            width: calc(100vw - 340px);
+            width: calc(100vw - 320px);
         }
     }
     .header-catalog,
@@ -185,6 +219,9 @@
             &-img {
                 height: 80px;
             }
+            &-top {
+                font-size: 16px;
+            }
         }
         &__submenu2 {
             &-a {
@@ -201,6 +238,11 @@
             &.active {
                 width: 48px;
                 overflow: hidden;
+            }
+        }
+        &__list {
+            &-a {
+                margin: 0;
             }
         }
         &__submenu {
@@ -229,6 +271,11 @@
             }
             &-img {
                 height: 60px;
+            }
+        }
+        &__back {
+            svg {
+                margin: 0 5px 0 0;
             }
         }
     }

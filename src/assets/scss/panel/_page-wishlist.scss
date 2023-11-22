@@ -115,6 +115,16 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .item-wishlist {
+        &__products {
+            .col {
+                width: 25%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .item-wishlist {
         &__nav {
@@ -122,6 +132,11 @@
                 width: 100%;
                 margin: 10px 0 0;
                 padding: 0 15px;
+            }
+        }
+        &__products {
+            .col {
+                width: 33.3333%;
             }
         }
     }
@@ -150,6 +165,11 @@
                         margin: 0 6px 0 0;
                     }
                 }
+            }
+        }
+        &__products {
+            .col {
+                width: 50%;
             }
         }
         &__total {

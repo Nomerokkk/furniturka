@@ -1,6 +1,6 @@
 .item-products {
     position: relative;
-    padding: 0 20px;
+    padding: 0 15px;
     height: 100%;
     &::before {
         content: '';
@@ -39,10 +39,10 @@
     }
     &__img {
         display: block;
-        margin: 40px 0 35px;
+        margin: 15px 0 10px;
     }
     &__picture {
-        height: 166px;
+        height: 180px;
         display: block;
         img {
             @extend .fit-contain;
@@ -86,6 +86,7 @@
         margin: 5px 0 0;
     }
     &__price {
+        white-space: nowrap;
         &-old {
             font: 400 14px / 1 $font;
             color: $grey;
@@ -93,7 +94,7 @@
             margin: 0 0 2px;
         }
         &-new {
-            font: 500 22px / 1 $font;
+            font: 500 20px / 1 $font;
         }
     }
     &__btn {
@@ -266,9 +267,6 @@
     .item-products {
         &__inner {
             padding: 20px 0;
-        }
-        &__img {
-            margin: 30px 0 20px;
         }
         &__code {
             text-align: left;
