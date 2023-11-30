@@ -3,23 +3,10 @@
 ?>
 <div class="item-products">
     <div class="item-products__inner">
-        <div class="item-products__code"><span>Артикул:</span> 09-2</div>
-        <div class="item-products__nav">
-            
-            <!-- <button type="button" class="item-products__btn item-products__btn--compare j-add-to-compare">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#compare"/>
-                </svg>
-                <span class="in-backet">
-                    <svg>
-                        <use xlink:href="<?= $target; ?>/img/icons.svg#checkbox"/>
-                    </svg>
-                </span>
-            </button> -->
-        </div>
+        <div class="item-products__code">09-2</div>
         <a href="/single-products.php" class="item-products__img" title="<?= $title; ?>">
             <picture class="item-products__picture">
-                <img src="<?= $target; ?>/img-webp/products/products1.webp" alt="" loading="lazy">
+                <img src="<?= $target; ?>/img/products/products3.webp" alt="" loading="lazy">
             </picture>
         </a>
         <a href="/single-products.php" class="item-products__title" title="<?= $title; ?>">

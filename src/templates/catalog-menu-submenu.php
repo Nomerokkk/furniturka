@@ -2,30 +2,11 @@
     $target = '/assets';
 ?>
 <div class="catalog-menu__submenu-top">
-    <div class="catalog-menu__back catalog-menu__back--close">
-        <div class="catalog-menu__back-link j-catalog-menu-close">
-            <svg>
-                <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
-            </svg>
-            Закрити
-        </div>
-    </div>
     <div class="catalog-menu__submenu-category">
-        <span>Внутрішні перегородки</span>
-        <div>(<a href="/products.php">Усі</a>)</div>
+        <a href="/products.php">Внутрішні перегородки</a>
     </div>
 </div>
 <ul class="catalog-menu__submenu-list">
-    <li class="catalog-menu__submenu-li">
-        <a href="/products.php" class="catalog-menu__submenu-a catalog-menu__submenu-a--all">
-            <div class="catalog-menu__submenu-img">
-                <img src="<?= $target; ?>/img-webp/products/products1.webp" alt="">
-            </div>
-            <div class="catalog-menu__submenu-title">
-                Усі товари в категорії
-            </div>
-        </a>
-    </li>
     <? for($i = 0; $i < 20; $i++) { ?>
         <li class="catalog-menu__submenu-li">
             <a href="/products.php" class="catalog-menu__submenu-a j-catalog-menu-a-sub">
@@ -38,30 +19,11 @@
             </a>
             <div class="catalog-menu__submenu catalog-menu__submenu--children j-catalog-menu-submenu">
                 <div class="catalog-menu__submenu-top">
-                    <div class="catalog-menu__back">
-                        <div class="catalog-menu__back-link j-catalog-menu-back">
-                            <svg>
-                                <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
-                            </svg>
-                            Назад
-                        </div>
-                    </div>
                     <div class="catalog-menu__submenu-category">
-                        <span>Внутрішні перегородки</span>
-                        <div>(<a href="/products.php">Усі</a>)</div>
+                        <a href="/products.php">Внутрішні перегородки</a>
                     </div>
                 </div>
                 <ul class="catalog-menu__submenu-list">
-                    <li class="catalog-menu__submenu-li">
-                        <a href="/products.php" class="catalog-menu__submenu-a catalog-menu__submenu-a--all">
-                            <div class="catalog-menu__submenu-img">
-                                <img src="<?= $target; ?>/img-webp/products/products1.webp" alt="">
-                            </div>
-                            <div class="catalog-menu__submenu-title">
-                                Усі товари в категорії
-                            </div>
-                        </a>
-                    </li>
                     <? $submenu2 = [
                         0 => 'Фрикційні ножниці',
                         1 => 'Противовзломная фурнитура МACO',

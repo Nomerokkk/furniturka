@@ -461,6 +461,15 @@ $(function() {
 		$(`[data-tab="${id}"]`).addClass('active');
 		$(`.tab-${id}`).addClass('active');
 	}
+
+	$('.tabs-single-products .j-scroll').on('click', function() {
+		let $this = $(this),
+			tab = $this.attr('data-scroll');
+
+		if(!$(tab).find('[data-toggle]').is('.active')) {
+			$(tab).find('[data-toggle]').trigger('click');
+		}
+	});
 });
 
 //password

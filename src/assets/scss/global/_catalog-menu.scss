@@ -101,7 +101,7 @@
         &-top {
             display: flex;
             align-items: center;
-            padding: 10px;
+            padding: 10px 15px;
             font: 400 20px / 1.2 $font;
             margin: 10px 0;
             background: rgba(#000, .03);
@@ -109,7 +109,6 @@
         }
         &-category {
             font-weight: 500;
-            margin: 0 0 0 30px;
             display: flex;
             min-width: 0;
             span {
@@ -119,10 +118,7 @@
                 margin: 0 7px 0 0;
             }
             a {
-                color: $red;
-                text-decoration: underline;
                 &:hover {
-                    text-decoration: none;
                     color: #000;
                 }
             }

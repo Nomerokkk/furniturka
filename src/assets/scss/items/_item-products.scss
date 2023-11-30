@@ -16,12 +16,17 @@
     }
     &__inner {
         position: relative;
-        padding: 20px 0 80px;
+        padding: 1px 0 60px;
     }
     &__code {
         font: 400 14px / 1 $font;
-        color: $grey;
+        color: #000;
         text-align: right;
+        position: absolute;
+        right: -14px;
+        top: 1px;
+        border-radius: 10px;
+        padding: 10px 14px;
     }
     .checkbox {
         display: flex;
@@ -34,15 +39,14 @@
     }
     &__nav {
         position: absolute;
-        top: 0;
-        right: -15px;
+        top: 1px;
+        right: -14px;
     }
     &__img {
         display: block;
-        margin: 15px 0 10px;
     }
     &__picture {
-        height: 180px;
+        height: 200px;
         display: block;
         img {
             @extend .fit-contain;
@@ -60,7 +64,7 @@
     }
     &__absolute {
         position: absolute;
-        bottom: 25px;
+        bottom: 5px;
         left: 0;
         right: 0;
         transition: .3s transform $trans;
@@ -83,7 +87,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 5px 0 0;
+        margin: 0;
     }
     &__price {
         white-space: nowrap;
@@ -134,7 +138,7 @@
             stroke: $grey2;
             stroke-width: .2px;
             fill: $grey2;
-            margin: 0 -15px 0 0;
+            margin: 0 -14px 0 0;
             visibility: hidden;
             opacity: 0;
             transform: scale(.9);
@@ -169,6 +173,8 @@
         .item-products {
             &__code {
                 text-align: left;
+                left: -14px;
+                right: unset;
             }
         }
     }
@@ -266,10 +272,12 @@
 @media screen and (max-width: 1200px) {
     .item-products {
         &__inner {
-            padding: 20px 0;
+            padding: 1px 0 10px;
         }
         &__code {
             text-align: left;
+            right: unset;
+            left: -14px;
         }
         &__absolute {
             position: static;
@@ -296,8 +304,8 @@
             }
             &--like {
                 position: absolute;
-                top: 0;
-                right: -20px;
+                top: 1px;
+                right: -14px;
             }
         }
     }
@@ -308,10 +316,13 @@
         padding: 0 12px;
         color: #000;
         &__inner {
-            padding: 12px 0 10px;
+            padding: 1px 0 5px;
         }
         &__code {
             font-size: 10px;
+            left: -11px !important;
+            top: 1px;
+            padding: 10px 11px;
             span {
                 display: none;
             }
@@ -322,11 +333,8 @@
         .checkbox {
             height: 40px;
         }
-        &__img {
-            margin: 10px 0;
-        }
         &__picture {
-            height: 85px;
+            height: 100px;
         }
         &__reviews {
             height: 18px;
@@ -347,7 +355,7 @@
             width: 36px;
             height: 36px;
             &--like {
-                right: -12px;
+                right: -11px;
                 stroke: $red;
                 svg {
                     width: 20px;
@@ -355,7 +363,7 @@
                 }
             }
             &--cart {
-                margin: 0 -12px 0 0;
+                margin: 0 -11px 0 0;
                 svg {
                     width: 20px;
                     height: 20px;

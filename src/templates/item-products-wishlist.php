@@ -1,6 +1,6 @@
 <div class="item-products item-products--wishlist">
     <div class="item-products__inner">
-        <div class="item-products__code"><span>Артикул:</span> 09-2</div>
+        <div class="item-products__code">09-2</div>
         <div class="item-products__nav">
             <label class="checkbox">
                 <input type="checkbox" class="j-wishlist-checkbox">
@@ -40,7 +40,7 @@
             </a>
             <div class="item-products__bottom">
                 <div class="item-products__price">
-                    <div class="item-products__price-old">1599</div>
+                    <!-- <div class="item-products__price-old">1599</div> -->
                     <div class="item-products__price-new">1245 грн</div>
                 </div>
                 <button type="button" class="item-products__btn item-products__btn--cart j-add-to-cart">
