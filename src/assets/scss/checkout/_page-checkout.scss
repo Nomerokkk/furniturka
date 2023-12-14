@@ -345,6 +345,7 @@
     .page-checkout {
         &__tabs {
             margin: 0 0 20px;
+            flex-wrap: wrap;
             &-li {
                 padding: 0;
             }
