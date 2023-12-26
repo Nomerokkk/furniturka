@@ -1,46 +1,34 @@
-<div class="social">
-    <ul class="social__list">
-        <li class="social__li">
-            <a href="#" class="social__a social__a--viber" target="_blank" title="Viber">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#viber"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social__li">
-            <a href="#" class="social__a social__a--telegram" target="_blank" title="Telegram">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#telegram"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social__li">
-            <a href="#" class="social__a social__a--whatsapp" target="_blank" title="Whatsapp">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#whatsapp"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social__li">
-            <a href="#" class="social__a social__a--facebook" target="_blank" title="Facebook">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#facebook"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social__li">
-            <a href="#" class="social__a social__a--facebook" target="_blank" title="Facebook">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#facebook"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social__li">
-            <a href="#" class="social__a social__a--facebook" target="_blank" title="Facebook">
-                <svg>
-                    <use xlink:href="<?= $target; ?>/img/icons.svg#facebook"/>
-                </svg>
-            </a>
-        </li>
-    </ul>
-</div>
+<? $social = [
+    0 => [
+        'url' => '#',
+        'img' => $target . '/img/social/viber.svg',
+    ],
+    1 => [
+        'url' => '#',
+        'img' => $target . '/img/social/telegram.svg',
+    ],
+    2 => [
+        'url' => '#',
+        'img' => $target . '/img/social/whatsapp.svg',
+    ],
+    3 => [
+        'url' => '#',
+        'img' => $target . '/img/social/facebook.svg',
+    ],
+];
+if($social) { ?>
+    <div class="social">
+        <ul class="social__list">
+            <? foreach($social as $i => $item) { 
+                $url = $item['url'];
+                $img = $item['img'];
+            ?>
+                <li class="social__li">
+                    <a href="<?= $url; ?>" class="social__a" target="_blank" title="Viber">
+                        <img src="<?= $img; ?>" alt="social" role="presentation">
+                    </a>
+                </li>
+            <? } ?>
+        </ul>
+    </div>
+<? } ?>
