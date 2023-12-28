@@ -490,6 +490,9 @@ $document.on('click', '.j-password-btn', function() {
 $(function() {
 	const select = $('.j-select').select2({
 		width: 'style',
+		placeholder: function() {
+			$(this).attr('data-placeholder');
+		}
 	});
 
 	select.on('select2:open', function(e) {

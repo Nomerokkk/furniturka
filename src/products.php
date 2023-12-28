@@ -159,15 +159,33 @@
                                 <use xlink:href="<?= $target; ?>/img/icons.svg#filter"/>
                             </svg>
                         </button>
-                        <div class="sort">
-                            <select class="select j-select" data-minimum-results-for-search="Infinity">
-                                <option value="За рейтингом">За рейтингом</option>
-                                <option value="Від дешевих до дорогих">Від дешевих до дорогих</option>
-                                <option value="Від дорогих до дешевих">Від дорогих до дешевих</option>
-                                <option value="Популярні">Популярні</option>
-                                <option value="Акційні">Акційні</option>
-                                <option value="Новинки">Новинки</option>
-                            </select>
+                        <div class="page-products__sort">
+                            <div class="page-products__sort-row">
+                                <div class="page-products__sort-col">
+                                    <div class="sort sort--numbers">
+                                        <select class="select j-select" data-minimum-results-for-search="Infinity" data-placeholder="Показати">
+                                            <option value="" disabled selected></option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="75">75</option>
+                                            <option value="100">100</option>
+                                            <option value="120">120</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="page-products__sort-col">
+                                    <div class="sort sort--order">
+                                        <select class="select j-select" data-minimum-results-for-search="Infinity">
+                                            <option value="За рейтингом">За рейтингом</option>
+                                            <option value="Від дешевих до дорогих">Від дешевих до дорогих</option>
+                                            <option value="Від дорогих до дешевих">Від дорогих до дешевих</option>
+                                            <option value="Популярні">Популярні</option>
+                                            <option value="Акційні">Акційні</option>
+                                            <option value="Новинки">Новинки</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="subcategory">
